@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>A Balada do Menestrel — RPG de ação sombrio para PC e Android</title>
+  <meta name="description" content="Desça às catacumbas, atravesse a Floresta dos Enforcados e o Pântano com o Menestrel e a Lia. RPG de ação sombrio, com masmorras geradas a cada partida, chefes e equipamentos lendários. Grátis para Windows e Android.">
+  <meta name="theme-color" content="#0a0807">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A Balada do Menestrel">
+  <meta property="og:description" content="RPG de ação sombrio para PC e Android. Masmorras, chefes, loot lendário — e uma canção para cada batalha.">
+  <meta property="og:image" content="assets/shots/chefe.webp">
+  <link rel="icon" href="assets/art/logo_crest.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/art/c6_hero.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="loader" aria-hidden="true"><img src="assets/art/logo_crest.webp" alt=""></div>
+
+  <!-- ============================================================ topo -->
+  <header class="topo" id="topo">
+    <a class="marca" href="#inicio" aria-label="A Balada do Menestrel — início">
+      <img src="assets/art/logo_crest.webp" alt="">
+      <span>A Balada do<b>Menestrel</b></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#jogo">O jogo</a>
+      <a href="#herois">Heróis</a>
+      <a href="#mundo">Mundo</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn btn-ouro btn-sm" href="#baixar">Baixar grátis</a>
+    <button class="hamburguer" id="hamburguer" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </header>
+
+  <!-- ============================================================ hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-camadas" aria-hidden="true">
+      <div class="camada c-fundo" data-prof="0.15"><img src="assets/art/c1_storm.webp" alt=""></div>
+      <div class="camada c-heroi" data-prof="0.35"><img src="assets/art/c6_hero.webp" alt=""></div>
+      <div class="nevoa n1"></div>
+      <div class="nevoa n2"></div>
+      <canvas class="brasas" id="brasas"></canvas>
+      <div class="hero-sombra"></div>
+    </div>
+
+    <div class="hero-conteudo">
+      <p class="selo revela"><span class="ponto"></span> RPG de ação sombrio · Windows e Android</p>
+      <h1 class="titulo revela" style="--d:.1s">
+        <small>A Balada do</small>
+        <span class="brilho" data-texto="Menestrel">Menestrel</span>
+      </h1>
+      <p class="lema revela" style="--d:.25s">Valcinza caiu na escuridão. Um bardo com um arco e uma maga com um cajado descem até o fundo dela.
+        <b>Toda batalha vira canção — se alguém sobreviver para cantar.</b></p>
+      <div class="acoes revela" style="--d:.4s">
+        <a class="btn btn-ouro btn-grande magnetico" href="#baixar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+          Baixar grátis
+        </a>
+        <a class="btn btn-vidro btn-grande" href="#galeria">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Ver o jogo
+        </a>
+      </div>
+      <ul class="plataformas revela" style="--d:.55s">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zm8.5-1.2L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zm8.5 0H21V21l-9.5-1.3z"/></svg> Windows 10/11</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9h10v8a1 1 0 01-1 1h-1v3h-2v-3h-2v3H9v-3H8a1 1 0 01-1-1zm-3 0h2v6H4zm14 0h2v6h-2zM8 8a4 4 0 018 0zm2-2.5a.6.6 0 100 1.2.6.6 0 000-1.2zm4 0a.6.6 0 100 1.2.6.6 0 000-1.2zM9 2l1 1.6M15 2l-1 1.6"/></svg> Android 7+</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.2 6.6.6-5 4.5 1.5 6.6L12 16.6 6 19.9l1.5-6.6-5-4.5 6.6-.6z"/></svg> 100% grátis</li>
+      </ul>
+    </div>
+
+    <a class="rolar" href="#jogo" aria-label="Rolar para baixo"><span></span></a>
+  </section>
+
+  <!-- ============================================================ faixa -->
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho">
+      <span>Masmorras geradas a cada partida</span><i>✦</i><span>7 chefes</span><i>✦</i><span>Loot lendário</span><i>✦</i>
+      <span>Dois heróis, um grupo</span><i>✦</i><span>4 elementos</span><i>✦</i><span>Chuva, névoa e tempestade</span><i>✦</i>
+      <span>Masmorras geradas a cada partida</span><i>✦</i><span>7 chefes</span><i>✦</i><span>Loot lendário</span><i>✦</i>
+      <span>Dois heróis, um grupo</span><i>✦</i><span>4 elementos</span><i>✦</i><span>Chuva, névoa e tempestade</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ============================================================ o jogo -->
+  <section class="secao historia" id="jogo">
+    <div class="historia-grade">
+      <div class="historia-texto">
+        <p class="sobretitulo revela">A história</p>
+        <h2 class="revela">Uma vila em chamas.<br><em>Uma canção inacabada.</em></h2>
+        <p class="revela">Na noite da tempestade, o fogo desceu sobre Valcinza. Quem não fugiu sumiu nas catacumbas debaixo da praça — e de lá começaram a subir coisas que não deviam andar.</p>
+        <p class="revela">Você é o <b>Menestrel</b>: arco nas costas, alaúde no peito e nenhum motivo para ficar. Mesmo assim você fica. Ao seu lado, a <b>Lia</b>, uma jovem maga que sabe mais sobre aquela escuridão do que gostaria.</p>
+        <blockquote class="revela">“Cada andar que a gente desce, a balada ganha um verso. Só falta saber quem vai cantar o último.”</blockquote>
+      </div>
+      <div class="historia-arte revela" style="--d:.15s">
+        <div class="moldura inclina">
+          <img src="assets/art/c2_road.webp" alt="O Menestrel chega a Valcinza na chuva" loading="lazy">
+        </div>
+        <div class="moldura moldura-mini inclina" data-prof="-0.08">
+          <img src="assets/art/c5_below.webp" alt="A entrada das catacumbas sob a praça" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ destaques -->
+  <section class="secao destaques">
+    <div class="cabeca">
+      <p class="sobretitulo revela">Por que jogar</p>
+      <h2 class="revela">Feito para quem sente falta dos clássicos do gênero</h2>
+    </div>
+    <div class="cartoes">
+      <article class="cartao revela">
+        <div class="cartao-icone"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12h-6v-7H9v7z"/></svg></div>
+        <h3>Masmorras que nunca se repetem</h3>
+        <p>Criptas, cavernas e ruínas montadas na hora: corredores tortos, paredes desabadas, salas escondidas. Cada descida é diferente.</p>
+      </article>
+      <article class="cartao revela" style="--d:.08s">
+        <div class="cartao-icone"><svg viewBox="0 0 24 24"><path d="M12 2c3 4 6 6 6 11a6 6 0 01-12 0c0-3 2-5 3-7 1 2 2 3 3 3 0-3 0-5 0-7z"/></svg></div>
+        <h3>Combate de verdade</h3>
+        <p>Esquiva com tempo certo, flechas que perfuram, bolas de fogo, tornados. Os monstros têm poderes próprios — e os chefes, fases.</p>
+      </article>
+      <article class="cartao revela" style="--d:.16s">
+        <div class="cartao-icone"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4 1 6.5L12 16l-5.5 3.5 1-6.5L3 9l6-1z"/></svg></div>
+        <h3>Loot que faz diferença</h3>
+        <p>Comum, mágico, raro e <span class="lend">lendário</span>. Afixos sorteados, poderes únicos e equipamento separado para cada herói.</p>
+      </article>
+      <article class="cartao revela" style="--d:.24s">
+        <div class="cartao-icone"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zm12-2a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h3>Música é arma</h3>
+        <p>O Menestrel toca canções de guerra e acordes que atordoam. A trilha muda com o lugar, com o combate e com o chefe.</p>
+      </article>
+      <article class="cartao revela" style="--d:.32s">
+        <div class="cartao-icone"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 016 6c0 2.5-1.5 4-2.5 5.5-.6.9-.5 1.5-.5 2.5H9c0-1 .1-1.6-.5-2.5C7.5 13 6 11.5 6 9a6 6 0 016-6zM9 19h6v2H9z"/></svg></div>
+        <h3>Luz do Cajado</h3>
+        <p>Na mata fechada, a tocha não basta. Passe a liderança para a Lia e deixe o cajado dela abrir caminho na escuridão.</p>
+      </article>
+      <article class="cartao revela" style="--d:.4s">
+        <div class="cartao-icone"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg></div>
+        <h3>PC e celular, mesmo jogo</h3>
+        <p>Teclado e mouse no Windows, toque com joystick virtual no Android. Gráficos que se ajustam ao aparelho.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================ números -->
+  <section class="numeros" aria-label="O jogo em números">
+    <div class="numero revela"><b data-conta="17">0</b><span>tipos de monstro</span></div>
+    <div class="numero revela" style="--d:.08s"><b data-conta="7">0</b><span>chefes</span></div>
+    <div class="numero revela" style="--d:.16s"><b data-conta="40" data-mais>0</b><span>habilidades</span></div>
+    <div class="numero revela" style="--d:.24s"><b data-conta="50" data-mais>0</b><span>peças de equipamento</span></div>
+  </section>
+
+  <!-- ============================================================ heróis -->
+  <section class="secao herois" id="herois">
+    <div class="cabeca">
+      <p class="sobretitulo revela">Os heróis</p>
+      <h2 class="revela">Dois caminhos. Um grupo.</h2>
+      <p class="sub revela">Controle um, o outro luta ao seu lado. Troque a qualquer momento com um toque no retrato.</p>
+    </div>
+    <div class="herois-grade">
+      <article class="heroi heroi-menestrel revela">
+        <div class="heroi-retrato"><img src="assets/icons/pt_minstrel.webp" alt="Retrato do Menestrel" loading="lazy"></div>
+        <div class="heroi-corpo">
+          <p class="heroi-papel">Arqueiro · Bardo</p>
+          <h3>O Menestrel</h3>
+          <p>Arco de longe, lâmina de perto e um alaúde para virar a luta. Três árvores de talento: <b>Arquearia</b>, <b>Lâmina</b> e <b>Canções de Poder</b>.</p>
+          <ul class="habilidades">
+            <li data-dica="Tiro Múltiplo"><img src="assets/icons/sk_multishot.webp" alt="Tiro Múltiplo" loading="lazy"></li>
+            <li data-dica="Flecha Perfurante"><img src="assets/icons/sk_pierce.webp" alt="Flecha Perfurante" loading="lazy"></li>
+            <li data-dica="Chuva de Flechas"><img src="assets/icons/sk_rain.webp" alt="Chuva de Flechas" loading="lazy"></li>
+            <li data-dica="Golpe Giratório"><img src="assets/icons/sk_whirl.webp" alt="Golpe Giratório" loading="lazy"></li>
+            <li data-dica="Canção de Guerra"><img src="assets/icons/sk_warsong.webp" alt="Canção de Guerra" loading="lazy"></li>
+            <li data-dica="Acorde Dissonante"><img src="assets/icons/sk_dissonant.webp" alt="Acorde Dissonante" loading="lazy"></li>
+          </ul>
+        </div>
+      </article>
+      <article class="heroi heroi-lia revela" style="--d:.12s">
+        <div class="heroi-retrato"><img src="assets/icons/pt_lia.webp" alt="Retrato da Lia" loading="lazy"></div>
+        <div class="heroi-corpo">
+          <p class="heroi-papel">Maga · Elementalista</p>
+          <h3>Lia</h3>
+          <p>Cajado, tomo e quatro elementos: <b class="el-fogo">Fogo</b>, <b class="el-agua">Água</b>, <b class="el-terra">Terra</b> e <b class="el-ar">Ar</b>. Destrói em área, controla o campo e cura o grupo.</p>
+          <ul class="habilidades">
+            <li data-dica="Bola de Fogo"><img src="assets/icons/sk_fireball.webp" alt="Bola de Fogo" loading="lazy"></li>
+            <li data-dica="Chuva de Meteoros"><img src="assets/icons/sk_meteor.webp" alt="Chuva de Meteoros" loading="lazy"></li>
+            <li data-dica="Lança de Gelo"><img src="assets/icons/sk_icelance.webp" alt="Lança de Gelo" loading="lazy"></li>
+            <li data-dica="Maré Calma"><img src="assets/icons/sk_tide.webp" alt="Maré Calma" loading="lazy"></li>
+            <li data-dica="Terremoto"><img src="assets/icons/sk_quake.webp" alt="Terremoto" loading="lazy"></li>
+            <li data-dica="Tornado"><img src="assets/icons/sk_tornado.webp" alt="Tornado" loading="lazy"></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================ mundo -->
+  <section class="secao mundo" id="mundo">
+    <div class="cabeca">
+      <p class="sobretitulo revela">O mundo</p>
+      <h2 class="revela">Quase mundo aberto.<br><em>Nenhum lugar seguro.</em></h2>
+    </div>
+
+    <div class="lugar">
+      <figure class="lugar-img revela-img"><img src="assets/shots/vila.webp" alt="A praça de Valcinza com bandeirolas, poço e o mercador" loading="lazy"></figure>
+      <div class="lugar-texto revela">
+        <span class="lugar-num">I</span>
+        <h3>Valcinza</h3>
+        <p>A vila que você vai ver cair e, se tudo der certo, renascer. Ferreiro, mercador, taverna, baú — e uma grade no chão da praça que leva para baixo.</p>
+      </div>
+    </div>
+
+    <div class="lugar lugar-inv">
+      <figure class="lugar-img revela-img"><img src="assets/shots/masmorra.webp" alt="Masmorra iluminada por tochas, com a escada da saída" loading="lazy"></figure>
+      <div class="lugar-texto revela">
+        <span class="lugar-num">II</span>
+        <h3>Catacumbas de Cinza</h3>
+        <p>Dez andares de criptas e cavernas geradas a cada descida, com tochas, ossos e armadilhas. No meio do caminho, o Carrasco. No fundo, o Arauto das Cinzas.</p>
+      </div>
+    </div>
+
+    <div class="lugar">
+      <figure class="lugar-img revela-img"><img src="assets/shots/floresta.webp" alt="Combate na floresta escura contra brutamontes e serpentes" loading="lazy"></figure>
+      <div class="lugar-texto revela">
+        <span class="lugar-num">III</span>
+        <h3>A Floresta</h3>
+        <p>Árvores com cordas penduradas, olhos que acendem entre os troncos, cavernas cavadas nos morros. A névoa esconde o que a tocha não alcança.</p>
+      </div>
+    </div>
+
+    <div class="lugar lugar-inv">
+      <figure class="lugar-img revela-img"><img src="assets/shots/horda.webp" alt="O grupo cercado por uma horda no pântano" loading="lazy"></figure>
+      <div class="lugar-texto revela">
+        <span class="lugar-num">IV</span>
+        <h3>O Pântano e o Brejo</h3>
+        <p>Água parada, sapos que cospem fogo verde, afogados que puxam para o fundo. Do outro lado, Juncal, a vila das palafitas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ galeria -->
+  <section class="secao galeria" id="galeria">
+    <div class="cabeca">
+      <p class="sobretitulo revela">Galeria</p>
+      <h2 class="revela">Capturas do jogo</h2>
+      <p class="sub revela">Imagens tiradas do jogo rodando, sem retoque de cena. Toque para ampliar.</p>
+    </div>
+    <div class="mosaico" id="mosaico">
+      <button class="foto f-grande revela" data-i="0"><img src="assets/shots/chefe-sm.webp" data-full="assets/shots/chefe.webp" alt="O Arauto das Cinzas invoca brutamontes sobre um pentagrama" loading="lazy"><span>O Arauto e seus brutamontes</span></button>
+      <button class="foto revela" style="--d:.05s" data-i="1"><img src="assets/shots/veneno-sm.webp" data-full="assets/shots/veneno.webp" alt="O cuspe de fogo verde de um sapo venenoso" loading="lazy"><span>Fogo verde do sapo</span></button>
+      <button class="foto revela" style="--d:.1s" data-i="2"><img src="assets/shots/fogueira-sm.webp" data-full="assets/shots/fogueira.webp" alt="Moradores em volta da fogueira, na chuva" loading="lazy"><span>Fogueira na chuva</span></button>
+      <button class="foto revela" style="--d:.15s" data-i="3"><img src="assets/shots/pantano-sm.webp" data-full="assets/shots/pantano.webp" alt="Brutamontes e carniçais no pântano" loading="lazy"><span>Cercados no brejo</span></button>
+      <button class="foto f-larga revela" style="--d:.2s" data-i="4"><img src="assets/shots/arauto-sm.webp" data-full="assets/shots/arauto.webp" alt="A luta contra o chefe nas catacumbas" loading="lazy"><span>Andar 10</span></button>
+      <button class="foto revela" style="--d:.25s" data-i="5"><img src="assets/shots/vila-sm.webp" data-full="assets/shots/vila.webp" alt="A vila de Valcinza" loading="lazy"><span>Valcinza</span></button>
+      <button class="foto revela" style="--d:.3s" data-i="6"><img src="assets/shots/floresta-sm.webp" data-full="assets/shots/floresta.webp" alt="O grupo enfrenta serpentes e brutamontes na floresta" loading="lazy"><span>Na mata escura</span></button>
+      <button class="foto revela" style="--d:.35s" data-i="7"><img src="assets/shots/masmorra-sm.webp" data-full="assets/shots/masmorra.webp" alt="A escada iluminada por tochas na masmorra" loading="lazy"><span>A saída do andar</span></button>
+    </div>
+  </section>
+
+  <!-- ============================================================ loot -->
+  <section class="secao loot">
+    <div class="loot-grade">
+      <div class="loot-texto">
+        <p class="sobretitulo revela">Equipamento</p>
+        <h2 class="revela">Cada baú pode<br>mudar a partida</h2>
+        <p class="revela">Arcos, cajados, tomos, lâminas, armaduras, anéis e amuletos — com raridade, afixos e, às vezes, um poder lendário que muda o jeito de jogar.</p>
+        <ul class="raridades revela">
+          <li class="r-c">Comum</li><li class="r-m">Mágico</li><li class="r-r">Raro</li><li class="r-l">Lendário</li>
+        </ul>
+      </div>
+      <div class="orbita revela" aria-hidden="true">
+        <div class="orbita-centro"><img src="assets/icons/it_bow_yew.webp" alt=""></div>
+        <div class="anel anel-1">
+          <img src="assets/icons/it_staff_crystal.webp" alt=""><img src="assets/icons/it_helm_minstrel.webp" alt=""><img src="assets/icons/it_amulet_moon.webp" alt=""><img src="assets/icons/it_ring_ruby.webp" alt="">
+        </div>
+        <div class="anel anel-2">
+          <img src="assets/icons/it_tome_runes.webp" alt=""><img src="assets/icons/it_orb_skull.webp" alt=""><img src="assets/icons/it_blade_scimitar.webp" alt=""><img src="assets/icons/it_chest_runic.webp" alt=""><img src="assets/icons/it_helm_witch.webp" alt=""><img src="assets/icons/it_boots_pilgrim.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ downloads -->
+  <section class="secao baixar" id="baixar">
+    <div class="baixar-fundo" aria-hidden="true"><img src="assets/art/c4_square.webp" alt=""></div>
+    <div class="cabeca">
+      <p class="sobretitulo revela">Download</p>
+      <h2 class="revela">Baixe e comece hoje</h2>
+      <p class="sub revela">Versão <b data-versao></b> · publicada em <span data-data></span>. Grátis, sem anúncios, sem cadastro.</p>
+    </div>
+
+    <div class="sistemas">
+      <div class="sistema revela" data-so="windows">
+        <div class="sistema-cabeca">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zm8.5-1.2L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zm8.5 0H21V21l-9.5-1.3z"/></svg>
+          <div><h3>Windows</h3><p>Computador ou notebook</p></div>
+          <span class="seu-sistema">Seu sistema</span>
+        </div>
+        <div class="arquivos" data-arquivos="windows"></div>
+      </div>
+      <div class="sistema revela" style="--d:.1s" data-so="android">
+        <div class="sistema-cabeca">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9h10v8a1 1 0 01-1 1h-1v3h-2v-3h-2v3H9v-3H8a1 1 0 01-1-1zm-3 0h2v6H4zm14 0h2v6h-2zM8 8a4 4 0 018 0z"/></svg>
+          <div><h3>Android</h3><p>Celular ou tablet</p></div>
+          <span class="seu-sistema">Seu sistema</span>
+        </div>
+        <div class="arquivos" data-arquivos="android"></div>
+      </div>
+    </div>
+
+    <div class="guias">
+      <details class="guia revela">
+        <summary>Como instalar no Windows</summary>
+        <ol>
+          <li>Baixe o <b>Instalador</b> (ou a versão <b>Portátil</b>, se não quiser instalar).</li>
+          <li>Abra o arquivo baixado. Como o jogo é independente e ainda não tem assinatura digital paga, o Windows pode mostrar a tela azul do <b>SmartScreen</b>.</li>
+          <li>Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.</li>
+          <li>No instalador, escolha a pasta e conclua. O atalho aparece na área de trabalho e no menu Iniciar.</li>
+        </ol>
+        <p class="nota">Quer conferir se o arquivo é o original? Compare o código SHA-256 do cartão de download com o resultado de <code>certutil -hashfile arquivo.exe SHA256</code> no Prompt de Comando.</p>
+      </details>
+      <details class="guia revela" style="--d:.08s">
+        <summary>Como instalar no Android</summary>
+        <ol>
+          <li>Abra esta página no celular e toque em <b>Baixar APK</b>.</li>
+          <li>Quando o download terminar, toque na notificação ou abra o arquivo em <b>Downloads</b>.</li>
+          <li>Se aparecer o aviso de segurança, toque em <b>Configurações</b> e ative <b>Permitir desta fonte</b> para o navegador (é só para este app).</li>
+          <li>Volte, toque em <b>Instalar</b> e pronto. Se o Play Protect perguntar, escolha <b>Instalar assim mesmo</b>.</li>
+        </ol>
+        <p class="nota">Recomendado: 4 GB de RAM ou mais. Em aparelhos mais simples, use a qualidade gráfica <b>Baixa</b> em Opções.</p>
+      </details>
+      <details class="guia revela" style="--d:.16s">
+        <summary>Controles</summary>
+        <div class="controles">
+          <div>
+            <h4>Teclado e mouse</h4>
+            <dl>
+              <dt><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></dt><dd>Andar</dd>
+              <dt><kbd>Clique</kbd></dt><dd>Andar / atacar o alvo</dd>
+              <dt><kbd>Shift</kbd>+<kbd>Clique</kbd></dt><dd>Atacar parado</dd>
+              <dt><kbd>Espaço</kbd> / <kbd>Botão direito</kbd></dt><dd>Esquiva</dd>
+              <dt><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd></dt><dd>Habilidades</dd>
+              <dt><kbd>Q</kbd></dt><dd>Poção</dd>
+              <dt><kbd>T</kbd></dt><dd>Trocar de herói</dd>
+              <dt><kbd>Tab</kbd> / <kbd>C</kbd></dt><dd>Mochila / herói</dd>
+            </dl>
+          </div>
+          <div>
+            <h4>Toque</h4>
+            <dl>
+              <dt>Polegar esquerdo</dt><dd>Joystick para andar</dd>
+              <dt>Botão grande</dt><dd>Atacar (segure para mirar)</dd>
+              <dt>Botões menores</dt><dd>Esquiva, poção e habilidades</dd>
+              <dt>Retrato</dt><dd>Trocar de herói</dd>
+              <dt>AUTO</dt><dd>Ataque automático</dd>
+            </dl>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============================================================ faq -->
+  <section class="secao faq" id="faq">
+    <div class="cabeca">
+      <p class="sobretitulo revela">Dúvidas</p>
+      <h2 class="revela">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-lista">
+      <details class="revela"><summary>O jogo é grátis mesmo?</summary><p>Sim. Sem anúncios, sem compras dentro do jogo e sem cadastro. Baixe e jogue.</p></details>
+      <details class="revela"><summary>Precisa de internet para jogar?</summary><p>Não. Depois de instalado, o jogo roda inteiro offline, no PC e no celular.</p></details>
+      <details class="revela"><summary>O progresso fica salvo?</summary><p>Fica, automaticamente, no próprio aparelho. Cada aparelho tem o seu salvamento.</p></details>
+      <details class="revela"><summary>Qual a diferença entre o Instalador e a versão Portátil?</summary><p>O Instalador coloca o jogo no computador com atalhos e desinstalador. A Portátil é um único arquivo que roda de qualquer pasta ou pendrive, sem instalar nada.</p></details>
+      <details class="revela"><summary>Por que o Windows/Android avisa que o arquivo pode ser perigoso?</summary><p>Porque o jogo é distribuído direto pelo estúdio, fora das lojas, e ainda não tem assinatura digital paga. O aviso é padrão para esse tipo de arquivo. Você pode conferir o código SHA-256 mostrado em cada download.</p></details>
+      <details class="revela"><summary>Tem mais capítulos vindo?</summary><p>Tem. Os capítulos I e II estão completos, e o capítulo III já está a caminho.</p></details>
+    </div>
+  </section>
+
+  <!-- ============================================================ chamada final -->
+  <section class="final">
+    <div class="final-fundo" aria-hidden="true"><img src="assets/shots/chefe.webp" alt=""></div>
+    <div class="final-conteudo">
+      <img class="final-brasao revela" src="assets/art/logo_crest.webp" alt="">
+      <h2 class="revela">A balada ainda não terminou.</h2>
+      <p class="revela">Falta o seu verso.</p>
+      <a class="btn btn-ouro btn-grande magnetico revela" href="#baixar">Baixar grátis agora</a>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="rodape-marca">
+      <img src="assets/art/logo_crest.webp" alt="">
+      <div><b>A Balada do Menestrel</b><span>um jogo da RiBS Gaming</span></div>
+    </div>
+    <p>Músicas e efeitos sonoros de autores da comunidade, com licença CC0 — os créditos completos estão no menu do jogo.</p>
+    <p class="copy">© 2026 RiBS Gaming. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- visualizador da galeria -->
+  <div class="caixa-luz" id="caixaLuz" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+    <button class="cl-fechar" aria-label="Fechar">✕</button>
+    <button class="cl-ant" aria-label="Anterior">‹</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button class="cl-prox" aria-label="Próxima">›</button>
+  </div>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
