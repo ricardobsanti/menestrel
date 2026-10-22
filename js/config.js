@@ -18,7 +18,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-instalador.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: 'f4c508a7b34205900faff05cdf55c4d983876c977b0438bfcd73e11c7dad3dda',
+      sha256: 'a6e7deb29844ab6bb5d29645680d1837bf1bf1dc211d92a0a348d2475838ddf0',
     },
     {
       id: 'win-portatil',
@@ -29,7 +29,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-portatil.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: '9a05d94a75ccd3e596ccf9f773aa1cd1d6e2f2a416680b0d4905c5664fa1a579',
+      sha256: '0867e89ecb52de2b80f808e4629da57d60710099099b0f742fccf5373270e926',
     },
     {
       id: 'android',
@@ -40,7 +40,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel.apk',
       tamanho: '156 MB',
       requisitos: 'Android 7.0 ou mais novo',
-      sha256: 'dc14a04ed328fdfb72b9fe621777b73896c8beda178f6020c435c1e2943bfa5a',
+      sha256: 'cf2ec0108ea1be5febfe824b7354a40c309cefda845f1c0e0360f6ff1ee8c60d',
     },
   ],
 };
