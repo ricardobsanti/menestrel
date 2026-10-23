@@ -222,7 +222,7 @@
 
   // ------------------------------------------------------------ downloads
   const ua = navigator.userAgent;
-  const meuSo = /android/i.test(ua) ? 'android' : /windows/i.test(ua) ? 'windows' : null;
+  const meuSo = /android/i.test(ua) ? 'android' : /windows/i.test(ua) ? 'windows' : /linux|x11/i.test(ua) ? 'linux' : null;
   $$('[data-versao]').forEach((el) => (el.textContent = cfg.versao || ''));
   $$('[data-data]').forEach((el) => (el.textContent = cfg.data || ''));
 
@@ -244,7 +244,7 @@
     el.innerHTML = `
       <h4>${d.rotulo}${d.principal ? '<span class="tag">Recomendado</span>' : ''}</h4>
       <p>${d.detalhe}</p>
-      <a class="btn ${d.principal ? 'btn-ouro' : 'btn-vidro'}" href="${d.arquivo}" download>${icBaixar} Baixar ${d.so === 'android' ? 'APK' : '.exe'}</a>
+      <a class="btn ${d.principal ? 'btn-ouro' : 'btn-vidro'}" href="${d.arquivo}" download>${icBaixar} Baixar ${d.so === 'android' ? 'APK' : d.so === 'linux' ? '.tar.gz' : '.exe'}</a>
       <div class="meta">
         <span>📦 ${d.tamanho}</span>
         <span>💻 ${d.requisitos}</span>

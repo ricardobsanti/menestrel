@@ -6,7 +6,7 @@
  *   https://github.com/USUARIO/REPO/releases/latest/download/menestrel-instalador.exe
  */
 window.MENESTREL_CONFIG = {
-  versao: '1.1.3',
+  versao: '1.1.5',
   data: '23 de outubro de 2026',
   downloads: [
     {
@@ -18,7 +18,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-instalador.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: '7aee0e604c784cde2372f5517b1db934cb091362e4c8d240e3a45de51b4d555d',
+      sha256: '22a2b771c6bcfd19fdeabd7773f5c57f4ce265bd061fc1d44ff8fb03e9414c1a',
     },
     {
       id: 'win-portatil',
@@ -29,7 +29,18 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-portatil.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: 'aa69bbb8afd95397641cd006d0ce5c531bcf5251d7c253803b27757e7905fc50',
+      sha256: '9436908689c2b998e47f88667c36f2e3856818ac7ab44ebafb45020d82b90974',
+    },
+    {
+      id: 'linux',
+      so: 'linux',
+      principal: true,
+      rotulo: 'Pacote para Linux',
+      detalhe: 'Extraia e abra o Jogar.sh — não instala nada. Funciona nas distribuições de 64 bits.',
+      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-linux.tar.gz',
+      tamanho: '266 MB',
+      requisitos: 'Linux 64 bits · placa de vídeo com OpenGL/Vulkan',
+      sha256: '4704e43a21cb4eba481c76083ca145c92233dc149a4d52d5efd0f409d51d957e',
     },
     {
       id: 'android',
@@ -40,7 +51,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel.apk',
       tamanho: '155 MB',
       requisitos: 'Android 7.0 ou mais novo',
-      sha256: 'ea794fe3bfcd227fdf22617f3d95ee6eb87f17d7288f3819d6ab604f3770906b',
+      sha256: 'e97411fe2b742b2889b2de828b6c74764d492b0a213bac539de2c7852beaf21b',
     },
   ],
 };

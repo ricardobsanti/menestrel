@@ -687,6 +687,7 @@ blockquote {
 .baixar-fundo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, var(--breu) 0%, rgba(10, 8, 7, 0.6) 30%, rgba(10, 8, 7, 0.6) 70%, var(--breu) 100%); }
 
 .sistemas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.sistema-largo { grid-column: 1 / -1; }
 .sistema {
   position: relative;
   padding: 28px;
