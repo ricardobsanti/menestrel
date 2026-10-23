@@ -6,8 +6,8 @@
  *   https://github.com/USUARIO/REPO/releases/latest/download/menestrel-instalador.exe
  */
 window.MENESTREL_CONFIG = {
-  versao: '0.1.0',
-  data: '22 de outubro de 2026',
+  versao: '1.1',
+  data: '23 de outubro de 2026',
   downloads: [
     {
       id: 'win-instalador',
@@ -18,7 +18,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-instalador.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: 'a6e7deb29844ab6bb5d29645680d1837bf1bf1dc211d92a0a348d2475838ddf0',
+      sha256: 'a8648d7a1df545c9ded6bccae2df429dfe3d9c600f47e5cb2789d35ac852c6c1',
     },
     {
       id: 'win-portatil',
@@ -29,7 +29,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-portatil.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: '0867e89ecb52de2b80f808e4629da57d60710099099b0f742fccf5373270e926',
+      sha256: 'e730559426d67dacfa86178c21056b02b74c94e45f95afd4cb36ce05fbc50d25',
     },
     {
       id: 'android',
@@ -38,9 +38,9 @@ window.MENESTREL_CONFIG = {
       rotulo: 'APK para Android',
       detalhe: 'Instale direto no celular ou tablet. Controles de toque feitos para jogar deitado no sofá.',
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel.apk',
-      tamanho: '156 MB',
+      tamanho: '155 MB',
       requisitos: 'Android 7.0 ou mais novo',
-      sha256: 'cf2ec0108ea1be5febfe824b7354a40c309cefda845f1c0e0360f6ff1ee8c60d',
+      sha256: '90c7ae0ca1f3ee56d4bc94b3ad865b0e937b80f149f347bea065f56dc61def6c',
     },
   ],
 };
