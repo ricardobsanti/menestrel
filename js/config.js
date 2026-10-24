@@ -6,7 +6,7 @@
  *   https://github.com/USUARIO/REPO/releases/latest/download/menestrel-instalador.exe
  */
 window.MENESTREL_CONFIG = {
-  versao: '1.1.8',
+  versao: '1.1.9',
   data: '24 de outubro de 2026',
   downloads: [
     {
@@ -18,7 +18,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-instalador.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: 'c9e27f525e7bc85adcd6d446bc8a8b6200a295524d045b001cb36b2c6cf49de5',
+      sha256: '6f45e97561b59bd2dbf9d4a0d26f78bb9577e74035435ffa75d3c3e3144eb2fc',
     },
     {
       id: 'win-portatil',
@@ -29,7 +29,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-portatil.exe',
       tamanho: '252 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: '57382e809c4b49204e1995d09b6e941f6e9ab20ac3683d02a8ec752b43f428a8',
+      sha256: 'b113ec0629eebb3dea4b712cb397b044f1cb2afb1f6355ceb983b39a01596c04',
     },
     {
       id: 'linux',
@@ -40,7 +40,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel-linux.tar.gz',
       tamanho: '266 MB',
       requisitos: 'Linux 64 bits · placa de vídeo com OpenGL/Vulkan',
-      sha256: '110a3e8aafbefc2e2e308605c21f0ea63aba254a3a559a9f663e17fd96447ae8',
+      sha256: '2cbdc9853f4f794cd68d4e566173962059ba8ab48e25e459b828d47198f74ee9',
     },
     {
       id: 'android',
@@ -51,7 +51,7 @@ window.MENESTREL_CONFIG = {
       arquivo: 'https://github.com/ricardobsanti/menestrel/releases/latest/download/menestrel.apk',
       tamanho: '155 MB',
       requisitos: 'Android 7.0 ou mais novo',
-      sha256: 'cf17fea638e83964f2402b872bc47b0518731f8c0a3f89c2a4c503b8dd1fa514',
+      sha256: 'c067fda9152b0acf555878be20f2b604c700b5c93bc4ab113745b9e65693ac90',
     },
   ],
 };
