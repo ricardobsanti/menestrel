@@ -3,11 +3,11 @@
  *
  * `arquivo` pode ser um caminho relativo (pasta downloads/ ao lado do site) ou um link completo,
  * por exemplo de uma Release do GitHub:
- *   https://github.com/USUARIO/REPO/releases/download/v1.4.0/menestrel-instalador.exe
+ *   https://github.com/USUARIO/REPO/releases/download/v1.5.0/menestrel-instalador.exe
  */
 window.MENESTREL_CONFIG = {
-  versao: '1.4.0',
-  data: '30 de outubro de 2026',
+  versao: '1.5.0',
+  data: '5 de novembro de 2026',
   downloads: [
     {
       id: 'win-instalador',
@@ -15,10 +15,10 @@ window.MENESTREL_CONFIG = {
       principal: true,
       rotulo: 'Instalador para Windows',
       detalhe: 'Instala o jogo, cria atalhos e aparece em "Aplicativos" para desinstalar quando quiser.',
-      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.4.0/menestrel-instalador.exe',
-      tamanho: '255 MB',
+      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.5.0/menestrel-instalador.exe',
+      tamanho: '263 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: 'a80e318d067a0d50d54fb31775b3cfd193ed2302b2a7bab0fc6ea8c4e917d1e5',
+      sha256: '07de45aa0ed502848a67ba861ec52f8dcf9f9f9236f4ecb25f83ade863e3dfb2',
     },
     {
       id: 'win-portatil',
@@ -26,10 +26,10 @@ window.MENESTREL_CONFIG = {
       principal: false,
       rotulo: 'Versão portátil (Windows)',
       detalhe: 'Não instala nada: é só abrir e jogar. Cabe num pendrive.',
-      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.4.0/menestrel-portatil.exe',
-      tamanho: '254 MB',
+      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.5.0/menestrel-portatil.exe',
+      tamanho: '262 MB',
       requisitos: 'Windows 10 ou 11 · 64 bits',
-      sha256: '386470205dc1cfda0d0d16af3e931cebdfff791d8bdaa1757b174c9fcdadeabb',
+      sha256: '66f96fd588b2f961280398c36df3357d664e7186013ab3fc8b05ac0e4c47d172',
     },
     {
       id: 'linux',
@@ -37,10 +37,10 @@ window.MENESTREL_CONFIG = {
       principal: true,
       rotulo: 'Pacote para Linux',
       detalhe: 'Extraia e abra o Jogar.sh — não instala nada. Funciona nas distribuições de 64 bits.',
-      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.4.0/menestrel-linux.tar.gz',
-      tamanho: '269 MB',
+      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.5.0/menestrel-linux.tar.gz',
+      tamanho: '277 MB',
       requisitos: 'Linux 64 bits · placa de vídeo com OpenGL/Vulkan',
-      sha256: 'b04ec9d165dd79aa8b43cf56f58a196bcc9d32949baaa22933010d1e52611f2b',
+      sha256: 'adcdac8383d61e35760481af70df9ef36d6e82eac5c24852d1e003e774c26ae4',
     },
     {
       id: 'android',
@@ -48,10 +48,10 @@ window.MENESTREL_CONFIG = {
       principal: true,
       rotulo: 'APK para Android',
       detalhe: 'Instale direto no celular ou tablet. Controles de toque feitos para jogar deitado no sofá.',
-      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.4.0/menestrel.apk',
-      tamanho: '158 MB',
+      arquivo: 'https://github.com/ricardobsanti/menestrel/releases/download/v1.5.0/menestrel.apk',
+      tamanho: '166 MB',
       requisitos: 'Android 7.0 ou mais novo',
-      sha256: '566a8849ac3ccf136e69d52ab110a5dfd71e74e3af1f86402533f19809d577cd',
+      sha256: 'c41d4d6320134b61181a08c143294334c939e42d1f8076aae14f0fb09e135f42',
     },
   ],
 };
