@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Balada do Menestrel 1.5.1 — novidades e comparação visual</title>
+<meta name="description" content="Veja as mudanças de combate, iluminação e materiais da versão 1.5.1 e compare os cenários antes e depois.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111216;color:#ebe3d6;font:16px/1.5 system-ui,sans-serif}main{max-width:1160px;margin:auto;padding:28px}h1{font-size:26px;margin:0 0 8px}p{color:#bdb7ac;margin:8px 0 20px}label{display:inline-block;margin-right:10px}select{background:#25272d;color:#eee5d7;border:1px solid #797064;padding:9px;border-radius:6px;font:inherit}.controls{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:18px 0}.controls input{flex:1;min-width:200px;accent-color:#c8aa73}.frame{position:relative;aspect-ratio:11/7;background:#07080a;border:1px solid #4c4941;overflow:hidden}.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.tag{position:absolute;top:14px;background:#101114dd;padding:5px 12px;border-radius:4px;pointer-events:none}.old{right:14px}.new{left:14px}#edge{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#f1d7a3;pointer-events:none}small{display:block;color:#a7a195;margin-top:14px}output{min-width:48px;text-align:right}
+</style>
+<main>
+<p><a href="index.html#galeria" style="color:#d8b87a">Voltar ao site do Menestrel</a></p>
+<h1>Versão 1.5.1 — combate, iluminação e materiais</h1>
+<p>Golpes e quedas mais coerentes, guarda dos elites com espaço para flanquear e efeitos elementais distintos. A apresentação ganhou sombras corrigidas, reflexos mais contidos e materiais com respostas diferentes.</p>
+<p><a href="index.html#baixar" style="color:#d8b87a">Ver os downloads e as orientações para Android</a></p>
+<p>Compare a versão anterior com esta rodada. Mova o controle para revelar a imagem nova.</p>
+<div class="controls"><label for="scene">Cenário</label><select id="scene"><option value="taverna">Taverna</option><option value="ferraria">Ferraria</option><option value="rua">Rua sob chuva</option><option value="cripta">Cripta</option></select></div>
+<div class="frame"><img id="before" src="assets/updates/1.5.1/before/taverna.png" alt="Iluminação anterior da taverna"><img id="after" src="assets/updates/1.5.1/after/taverna.png" alt="Nova iluminação da taverna" style="clip-path:inset(0 50% 0 0)"><span class="tag new">Depois</span><span class="tag old">Antes</span><span id="edge"></span></div>
+<div class="controls"><label for="amount">Área da versão nova</label><input id="amount" type="range" min="0" max="100" value="50"><output id="value" for="amount">50%</output></div>
+<small>Mesma câmera e qualidade gráfica nas duas versões. As capturas mostram o acabamento dos cenários; o desempenho varia conforme o aparelho.</small>
+</main>
+<script>
+const scene=document.querySelector('#scene'),amount=document.querySelector('#amount');
+scene.addEventListener('change',()=>{document.querySelector('#before').src='assets/updates/1.5.1/before/'+scene.value+'.png';document.querySelector('#after').src='assets/updates/1.5.1/after/'+scene.value+'.png';document.querySelector('#before').alt='Iluminação anterior: '+scene.selectedOptions[0].text;document.querySelector('#after').alt='Nova iluminação: '+scene.selectedOptions[0].text;});
+amount.addEventListener('input',()=>{document.querySelector('#after').style.clipPath='inset(0 '+(100-Number(amount.value))+'% 0 0)';document.querySelector('#edge').style.left=amount.value+'%';document.querySelector('#value').textContent=amount.value+'%';});
+</script>
+</html>

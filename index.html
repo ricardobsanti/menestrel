@@ -93,6 +93,7 @@
   </section>
 
   <!-- ============================================================ faixa -->
+  <div class="faixa-moldura">
   <div class="faixa" aria-hidden="true">
     <div class="faixa-trilho">
       <span>Masmorras geradas a cada partida</span><i>✦</i><span>7 chefes</span><i>✦</i><span>Loot lendário</span><i>✦</i>
@@ -102,6 +103,7 @@
     </div>
   </div>
 
+  </div>
   <!-- ============================================================ o jogo -->
   <section class="secao historia" id="jogo">
     <div class="historia-grade">
@@ -263,9 +265,15 @@
     <div class="cabeca">
       <p class="sobretitulo revela">Galeria</p>
       <h2 class="revela">Capturas do jogo</h2>
-      <p class="sub revela">Imagens tiradas do jogo rodando, sem retoque de cena. Toque para ampliar.</p>
+      <p class="sub revela">Novos cenários da 1.5.1 e capturas de versões anteriores, sem retoque de cena. Toque para ampliar.</p>
     </div>
+    <p class="sub revela"><a href="atualizacao-1.5.1.html">Veja as novidades da 1.5.1 e compare a iluminação antes e depois</a>.</p>
     <div class="mosaico" id="mosaico">
+      <button class="foto f-grande revela"><img src="assets/updates/1.5.1/after/rua.png" data-full="assets/updates/1.5.1/after/rua.png" alt="Calçamento e fachadas de Valcinza com os novos ajustes de iluminação e reflexos — versão 1.5.1" loading="lazy"><span>Valcinza sob chuva · 1.5.1</span></button>
+      <button class="foto revela"><img src="assets/updates/1.5.1/after/taverna.png" data-full="assets/updates/1.5.1/after/taverna.png" alt="Interior da taverna com madeira, mesas e luz de velas — versão 1.5.1" loading="lazy"><span>Taverna do Último Acorde · 1.5.1</span></button>
+      <button class="foto revela"><img src="assets/updates/1.5.1/after/ferraria.png" data-full="assets/updates/1.5.1/after/ferraria.png" alt="Interior da ferraria com piso de pedra e iluminação da forja — versão 1.5.1" loading="lazy"><span>Ferraria da Brasa · 1.5.1</span></button>
+      <button class="foto revela"><img src="assets/updates/1.5.1/after/cripta.png" data-full="assets/updates/1.5.1/after/cripta.png" alt="Cripta com paredes de pedra, velas e a saída do andar — versão 1.5.1" loading="lazy"><span>Catacumbas · 1.5.1</span></button>
+
       <button class="foto f-grande revela" data-i="0"><img src="assets/shots/chefe-sm.webp" data-full="assets/shots/chefe.webp" alt="O Arauto das Cinzas invoca brutamontes sobre um pentagrama" loading="lazy"><span>O Arauto e seus brutamontes</span></button>
       <button class="foto revela" style="--d:.05s" data-i="1"><img src="assets/shots/veneno-sm.webp" data-full="assets/shots/veneno.webp" alt="O cuspe de fogo verde de um sapo venenoso" loading="lazy"><span>Fogo verde do sapo</span></button>
       <button class="foto revela" style="--d:.1s" data-i="2"><img src="assets/shots/fogueira-sm.webp" data-full="assets/shots/fogueira.webp" alt="Moradores em volta da fogueira, na chuva" loading="lazy"><span>Fogueira na chuva</span></button>
@@ -338,6 +346,7 @@
           <div><h3>Android</h3><p>Celular ou tablet</p></div>
           <span class="seu-sistema">Seu sistema</span>
         </div>
+        <aside class="aviso-android" aria-label="Compatibilidade com o APK anterior"><h4>Já tem a versão 1.5.0 no Android?</h4><p>A 1.5.1 usa uma nova assinatura e não instala por cima do APK antigo. <strong>Mantenha o jogo anterior instalado para preservar seu progresso.</strong> Não há migração automática dos saves. O APK novo é destinado a novas instalações; o pacote original da 1.5.0 continua abaixo.</p></aside>
         <div class="arquivos" data-arquivos="android"></div>
       </div>
       <div class="sistema sistema-largo revela" style="--d:.2s" data-so="linux">
@@ -364,7 +373,7 @@
       <details class="guia revela" style="--d:.04s">
         <summary>Como jogar no Linux</summary>
         <ol>
-          <li>Baixe o pacote <b>.tar.gz</b> e extraia (botão direito → <b>Extrair aqui</b>, ou <code>tar -xzf "A Balada do Menestrel - Linux.tar.gz"</code>).</li>
+          <li>Baixe o pacote <b>.tar.gz</b> e extraia (botão direito → <b>Extrair aqui</b>, ou <code>tar -xzf menestrel-linux.tar.gz</code>).</li>
           <li>Abra a pasta e dê dois cliques em <b>Jogar.sh</b> (se o gerenciador perguntar, escolha <b>Executar</b>). Pelo terminal: <code>./Jogar.sh</code>.</li>
           <li>Não precisa instalar nada; o progresso fica salvo na sua pasta de usuário.</li>
         </ol>
@@ -372,6 +381,7 @@
       </details>
       <details class="guia revela" style="--d:.08s">
         <summary>Como instalar no Android</summary>
+        <p class="nota">A versão 1.5.1 tem nova assinatura. Se já tem o jogo antigo, mantenha-o instalado: desinstalar pode apagar o progresso.</p>
         <ol>
           <li>Abra esta página no celular e toque em <b>Baixar APK</b>.</li>
           <li>Quando o download terminar, toque na notificação ou abra o arquivo em <b>Downloads</b>.</li>
@@ -423,7 +433,7 @@
       <details class="revela"><summary>O progresso fica salvo?</summary><p>Fica, automaticamente, no próprio aparelho. Cada aparelho tem o seu salvamento.</p></details>
       <details class="revela"><summary>Qual a diferença entre o Instalador e a versão Portátil?</summary><p>O Instalador coloca o jogo no computador com atalhos e desinstalador. A Portátil é um único arquivo que roda de qualquer pasta ou pendrive, sem instalar nada.</p></details>
       <details class="revela"><summary>Por que o Windows/Android avisa que o arquivo pode ser perigoso?</summary><p>Porque o jogo é distribuído direto pelo estúdio, fora das lojas, e ainda não tem assinatura digital paga. O aviso é padrão para esse tipo de arquivo. Você pode conferir o código SHA-256 mostrado em cada download.</p></details>
-      <details class="revela"><summary>O jogo travou ou deu erro. O que eu faço?</summary><p>Primeiro, desculpe! Esta é uma versão Beta e ainda estamos caçando esses problemas. Se o jogo ficar pesado, ele mesmo reduz a qualidade gráfica — e você pode escolher <b>Baixo</b> em Opções. Conta pra gente o que aconteceu (de preferência com um print ou vídeo): é assim que o jogo melhora.</p></details>
+      <details class="revela"><summary>O jogo travou ou deu erro. O que eu faço?</summary><p>Esta é uma versão Beta e ainda estamos corrigindo problemas. Se o jogo ficar pesado, escolha <b>Baixo</b> em Opções. A redução automática de qualidade só acontece se você ativar essa opção. Conte o que aconteceu, de preferência com um print ou vídeo, para ajudar na correção.</p></details>
       <details class="revela"><summary>Tem mais capítulos vindo?</summary><p>Tem. Os capítulos I e II estão completos, e o capítulo III já está a caminho.</p></details>
     </div>
   </section>
@@ -458,7 +468,7 @@
 
   <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
 
-  <script src="js/config.js?v=1.1.23"></script>
+  <script src="js/config.js?v=1.5.1"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

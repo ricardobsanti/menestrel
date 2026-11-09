@@ -34,7 +34,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   margin: 0;
@@ -328,6 +328,7 @@ b { color: #fff3dc; font-weight: 600; }
 @keyframes desce { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
 
 /* ---------------------------------------------------------------- faixa correndo */
+.faixa-moldura { overflow: clip; padding: 8px 0; }
 .faixa {
   position: relative;
   z-index: 2;
@@ -943,3 +944,8 @@ kbd { display: inline-block; min-width: 26px; padding: 3px 7px; border-radius: 6
   *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
   .revela, .revela-img { opacity: 1; transform: none; filter: none; clip-path: none; }
 }
+
+/* Compatibilidade dos APKs publicados antes da reinstalacao do Windows. */
+.aviso-android { margin: 20px 0; padding: 16px; border-left: 3px solid var(--ouro); background: #b98a2b12; }
+.aviso-android h4 { margin: 0 0 8px; color: #f0d9aa; }
+.aviso-android p { margin: 0; color: var(--texto-2); font-size: 14px; line-height: 1.6; }
