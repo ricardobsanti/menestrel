@@ -1,51 +1,51 @@
-// Downloads da versão 1.6.1; hashes dos pacotes gerados.
+// Downloads da versão 1.7.0; hashes dos pacotes gerados.
 window.MENESTREL_CONFIG = {
-  "versao": "1.6.1",
+  "versao": "1.7.0",
   "data": "9 de novembro de 2026",
   "downloads": [
     {
       "id": "win-instalador",
       "so": "windows",
       "principal": true,
-      "rotulo": "Instalador para Windows · 1.6.1",
+      "rotulo": "Instalador para Windows · 1.7.0",
       "detalhe": "Instala o jogo, cria atalhos e permite desinstalar em Aplicativos.",
-      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.6.1/menestrel-instalador.exe",
+      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.7.0/menestrel-instalador.exe",
       "tamanho": "264 MB",
       "requisitos": "Windows 10 ou 11 · 64 bits",
-      "sha256": "5a46a2b3dca5d4635ed7a8e025f4e4283e4b02629aaab42b9970c5b2aa88b1bc"
+      "sha256": "e539d38215e2a5911d3fd2a468847132c77efa19212b0fe4fa4817dfebad5c6e"
     },
     {
       "id": "win-portatil",
       "so": "windows",
       "principal": false,
-      "rotulo": "Versão portátil Windows · 1.6.1",
+      "rotulo": "Versão portátil Windows · 1.7.0",
       "detalhe": "Abra e jogue sem instalar.",
-      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.6.1/menestrel-portatil.exe",
+      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.7.0/menestrel-portatil.exe",
       "tamanho": "264 MB",
       "requisitos": "Windows 10 ou 11 · 64 bits",
-      "sha256": "838c7945254b4c7358efd598f518dddc1612665a7878732f09a988c8c4d3920b"
+      "sha256": "685af84fc93b58ec02d465e415f1786a67ce476a6e52f47a033c6ff30e05be4d"
     },
     {
       "id": "linux",
       "so": "linux",
       "principal": true,
-      "rotulo": "Pacote Linux · 1.6.1",
+      "rotulo": "Pacote Linux · 1.7.0",
       "detalhe": "Extraia e abra Jogar.sh. Não precisa instalar o jogo.",
-      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.6.1/menestrel-linux.tar.gz",
+      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.7.0/menestrel-linux.tar.gz",
       "tamanho": "274 MB",
       "requisitos": "Linux 64 bits · OpenGL/Vulkan",
-      "sha256": "9b8db8148d37fff7e0467a0c1e44cf1a976d2fcd0ba38ec11d8f81cad5202a28"
+      "sha256": "ccd3d71f7c823bf7080ef016f1d1493144130922f31055e648740918f28a1a6f"
     },
     {
       "id": "android",
       "so": "android",
       "principal": true,
-      "rotulo": "APK Android · 1.6.1",
-      "detalhe": "Atualiza a 1.6.0, 1.5.2 e 1.5.1 sem desinstalar. Assinatura incompatível com a 1.5.0; mantenha essa instalação para preservar o progresso antigo.",
-      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.6.1/menestrel.apk",
+      "rotulo": "APK Android · 1.7.0",
+      "detalhe": "Atualiza a 1.6.1 e demais versões com a assinatura recente sem desinstalar. Assinatura incompatível com a antiga 1.5.0.",
+      "arquivo": "https://github.com/ricardobsanti/menestrel/releases/download/v1.7.0/menestrel.apk",
       "tamanho": "168 MB",
       "requisitos": "Android 7.0 ou superior",
-      "sha256": "e26819142699e697ba1e6316284fbd28fb900ea6deb5be02a2ae22166e3e42a9"
+      "sha256": "e3bdbc1e3a51802cb74f8fbbef6d313f1948260dd6120d62c83a7e67e49b60ff"
     },
     {
       "id": "android-anterior",
