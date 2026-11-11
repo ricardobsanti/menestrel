@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Entrar — A Balada do Menestrel</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 35%,#231c1c,#0c0b10 70%);color:#e4dcc8;font:17px/1.6 Georgia,serif;padding:24px 16px}
+  main{max-width:440px;text-align:center}
+  img{width:120px;height:120px;border-radius:50%}
+  h1{font:500 30px/1.2 Georgia,serif;color:#e9dbb6;margin:12px 0 8px}
+  p{color:#c5baa7;margin:0 0 22px}
+  button{font:600 17px Georgia,serif;color:#ffebbb;background:linear-gradient(#57432b,#2b2019 55%,#191419);border:1px solid #b39a62;padding:14px 26px;cursor:pointer;box-shadow:inset 0 1px #ecd3a04d,inset 0 -2px #0009;display:inline-flex;gap:12px;align-items:center}
+  button:disabled{opacity:.5;cursor:default}
+  button:focus-visible{outline:2px solid #e8d8a5;outline-offset:4px}
+  #msg{min-height:1.6em;margin-top:18px;color:#ddc995}
+</style>
+</head>
+<body>
+<main>
+  <img src="assets/art/logo_crest.webp" alt="" onerror="this.remove()">
+  <h1>A Balada do Menestrel</h1>
+  <p>Entre com sua conta Google para guardar o progresso do jogo na nuvem.</p>
+  <button id="go" type="button"><svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>Entrar com Google</button>
+  <div id="msg" role="status"></div>
+</main>
+<script type="module">
+  // Página de login do jogo (Windows/Linux e navegador). Só entrega o ID token do Google de volta
+  // ao jogo: para o servidor local do jogo (127.0.0.1, no #fragmento) ou para a janela que abriu.
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+  import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, inMemoryPersistence, setPersistence } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+
+  const app = initializeApp({
+    apiKey: 'AIzaSyBQCIVsIrdaX_9thFF1Q9A55YPF_D0Ba8k',
+    authDomain: 'menestrel-c310c.firebaseapp.com',
+    projectId: 'menestrel-c310c',
+    appId: '1:616920420476:web:3e6bcc1753b8ecb22979f9',
+  });
+  const auth = getAuth(app);
+  await setPersistence(auth, inMemoryPersistence);
+  const q = new URLSearchParams(location.search);
+  const port = Number(q.get('port'));
+  const state = q.get('state') ?? '';
+  const popup = q.get('mode') === 'popup' && window.opener;
+  const msg = document.getElementById('msg');
+  const go = document.getElementById('go');
+  // só devolve para o próprio jogo: servidor local ou janela do jogo aberta em localhost
+  const GAME_ORIGINS = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
+
+  function deliver(idToken, error) {
+    if (port > 0 && port < 65536) {
+      const h = new URLSearchParams({ state, ...(idToken ? { id_token: idToken } : { error: error || 'cancelado' }) });
+      location.replace(`http://127.0.0.1:${port}/cb#${h}`);
+    } else if (popup) {
+      for (const o of ['http://localhost:5173', 'http://127.0.0.1:5191', 'http://localhost:5191', 'http://127.0.0.1:5173']) {
+        if (GAME_ORIGINS.test(o)) window.opener.postMessage({ type: 'menestrel-google', idToken: idToken || null }, o);
+      }
+      window.close();
+    } else {
+      msg.textContent = idToken ? 'Conta conectada. Abra o jogo para continuar.' : 'Login cancelado.';
+    }
+  }
+
+  go.addEventListener('click', async () => {
+    go.disabled = true;
+    msg.textContent = 'Escolha sua conta na janela do Google…';
+    try {
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: 'select_account' });
+      const result = await signInWithPopup(auth, provider);
+      const idToken = GoogleAuthProvider.credentialFromResult(result)?.idToken;
+      await signOut(auth);
+      if (!idToken) throw new Error('sem token');
+      msg.textContent = 'Conectado! Voltando ao jogo…';
+      deliver(idToken);
+    } catch (e) {
+      go.disabled = false;
+      const cancelled = /popup-closed|cancelled-popup|user-cancelled/.test(String(e?.code ?? e));
+      msg.textContent = cancelled ? 'Login cancelado. Clique de novo para tentar.' : 'Não foi possível entrar. Tente de novo.';
+    }
+  });
+</script>
+</body>
+</html>
